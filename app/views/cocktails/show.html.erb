@@ -1,19 +1,28 @@
-<h1><%= @cocktail.name %></h1>
+<div class="main-wrapper">
+  <div class="wrapper-skinny">
+  <%= link_to "Go back to cocktails page", cocktails_path, class:'button-back' %>
 
-<p>To make this cocktail, you need:</p>
+  <h1><%= @cocktail.name %></h1>
 
-  <h1 class="text-align">Add doses to: <%= @cocktail.name %></h1>
-  <%= simple_form_for([@cocktail, @dose]) do |f|%>
-    <%= f.input :ingredient_id, collection: Ingredient.all %>
-    <%= f.input :description %>
-    <%= f.submit %>
-  <% end %>
+    <div class="wrapper-cocktail">
+      <p>To make this cocktail, you need:</p>
+      <% @cocktail.doses.each do |dose| %>
+        Dose: <%= dose.description %> |
+        Ingredient: <%= dose.ingredient.name %>
+        <%= link_to "Delete this dose", dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <% end %>
+    </div>
 
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.description %>
-    <%= dose.ingredient.name %>
-    <%= link_to "Delete this dose", dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'} %>
-  <% end %>
+    <hr>
 
+    <div class="wrapper-dose">
+      <h3>Add doses to: <%= @cocktail.name %></h3>
+      <%= simple_form_for([@cocktail, @dose]) do |f|%>
+        <%= f.input :ingredient_id, collection: Ingredient.all %>
+        <%= f.input :description %>
+        <%= f.submit "Add a dose", class:'button-main' %>
+      <% end %>
+    </div>
 
-<%= link_to "Go back to cocktails page", cocktails_path, class:'button-main' %>
+  </div>
+</div>

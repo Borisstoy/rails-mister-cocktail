@@ -1,0 +1,7 @@
+.wrapper-ingredient {
+  display: flex;
+  justify-content: center;
+  .ingredient {
+    flex: 0 0 25%;
+  }
+}
