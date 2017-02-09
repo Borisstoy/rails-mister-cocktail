@@ -18,7 +18,7 @@
     <div class="wrapper-dose">
       <h3>Add doses to: <%= @cocktail.name %></h3>
       <%= simple_form_for([@cocktail, @dose]) do |f|%>
-        <%= f.input :ingredient_id, collection: Ingredient.all %>
+        <%= f.input :ingredient_id, collection: Ingredient.all.order(:name)  %>
         <%= f.input :description %>
         <%= f.submit "Add a dose", class:'button-main' %>
       <% end %>
