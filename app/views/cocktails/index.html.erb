@@ -1,4 +1,19 @@
-<h1>My cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-<%= cocktail.name %>
-<% end %>
+<div class="main-banner">
+  <div class="wrapper-intro">
+    <h1>Discover Coktails.<br>Taylor made for you.</h1>
+    <%= link_to "See all our ingredients", ingredients_path, class:'button-banner' %>
+    <%= link_to "Add a cocktail", new_cocktail_path, class:'button-banner' %>
+  </div>
+</div>
+
+<div class="main-wrapper">
+  <div class="wrapper-skinny">
+    <% @cocktails.each do |cocktail| %>
+      div.cock-name
+        <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+        <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
+  </div>
+</div>
+
+

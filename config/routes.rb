@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root 'cocktails#index'
 
   resources :cocktails do
-    resources :doses, only: [:new, :create]
+    resources :doses, only: [:create]
   end
+  # just want to access a dose, not the cocktail dose
+  resources :doses, only: [:destroy]
 
+  resources :ingredients
 end

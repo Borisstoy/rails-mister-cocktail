@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <div class="wrapper-skinny">
-    <%= form_for(@cocktail) do |f| %>
+    <%= form_for(@ingredient) do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
       <%= f.submit %>
@@ -9,4 +9,4 @@
   </div>
 </div>
 
-<%= link_to "Go back to cocktails page", cocktails_path, class:'button-main' %>
+<%= link_to "Go back to ingredients page", cocktails_path, class:'button-main' %>
