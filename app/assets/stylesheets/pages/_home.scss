@@ -2,11 +2,18 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Bitter', serif;
+}
+
+p, a {
+  font-family: 'Muli', sans-serif;
+}
+
 .main-banner {
   background: image-url("banner-image.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
-  display: flex;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
@@ -22,5 +29,25 @@
         color: #fff;
         margin-bottom: 4rem;
       }
+  }
+}
+
+.wrapper-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  .cock-name {
+    flex: 1 0 auto;
+    padding: 2em 0;
+  }
+  .cock-action{
+    justify-content: flex-end;
+  }
+  h3 a{
+    font-size: .8em;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
   }
 }

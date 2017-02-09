@@ -9,9 +9,14 @@
 <div class="main-wrapper">
   <div class="wrapper-skinny">
     <% @cocktails.each do |cocktail| %>
-      div.cock-name
-        <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-        <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <div class="wrapper-list">
+        <div class="cock-name">
+          <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+        </div>
+        <div class="cock-action">
+          <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete, data: {confirm: 'Are you sure?'}, class: 'button-delete' %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
