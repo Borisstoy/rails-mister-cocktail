@@ -35,12 +35,20 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+################################
+# custom gem
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
 gem 'figaro'
+
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave'
+
+
+################################
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

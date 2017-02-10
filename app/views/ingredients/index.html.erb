@@ -1,9 +1,9 @@
 <div class="main-wrapper">
   <div class="wrapper-skinny">
-    <%= link_to "See all coktails", cocktails_path, class:'button-main' %>
-
-    <%= link_to "Add an ingredient", new_ingredient_path, class:'button-main' %>
-
+    <div class="list-action">
+      <%= link_to "See all coktails", cocktails_path, class:'button-main' %>
+      <%= link_to "Add an ingredient", new_ingredient_path, class:'button-main' %>
+    </div>
     <div class="wrapper-ingredients">
       <% @ingredients.each do |ingredient| %>
         <div class="ingredient">

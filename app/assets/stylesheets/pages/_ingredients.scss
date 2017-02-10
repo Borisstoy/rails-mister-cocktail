@@ -1,7 +1,12 @@
-.wrapper-ingredient {
-  display: flex;
-  justify-content: center;
+.list-action {
+  margin: 2rem 0;
+}
+
+.wrapper-ingredients {
   .ingredient {
-    flex: 0 0 25%;
+    border-bottom: 1px solid #eaeaea;
+    margin: 1rem 0;
+    padding: .7em 0;
   }
 }
+

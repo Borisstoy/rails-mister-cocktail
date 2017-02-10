@@ -1,10 +1,19 @@
-<h1><%= @ingredient.name %></h1>
-<ul>
-  <% @ingredient.cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to 'Back', cocktails_path %>
+<div class="banner-cocktails">
+  <div class="wrapper-skinny">
+    <h1>Cocktails with <%= @ingredient.name %></h1>
+  </div>
+</div>
+
+<div class="main-wrapper">
+  <div class="wrapper-skinny">
+    <ul>
+      <% @ingredient.cocktails.each do |cocktail| %>
+        <li>
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to 'Back to the cocktails list', cocktails_path %>
+  </div>
+</div>
 
