@@ -41,6 +41,10 @@ p, a {
   .cock-pic {
     flex: 0 0 auto;
     margin-right: 2rem;
+    img {
+      max-width: 100px;
+      border-radius: .2em;
+    }
   }
   .cock-name {
     flex: 1 0 auto;
