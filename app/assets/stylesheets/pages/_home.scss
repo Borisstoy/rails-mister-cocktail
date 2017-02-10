@@ -39,10 +39,11 @@ p, a {
   align-items: center;
   border-bottom: 1px solid #eaeaea;
   .cock-pic {
-    flex: 0 0 auto;
+    flex: 0 0 100px;
     margin-right: 2rem;
     img {
       max-width: 100px;
+      max-height: 80px;
       border-radius: .2em;
     }
   }

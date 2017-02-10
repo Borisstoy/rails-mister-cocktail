@@ -8,7 +8,7 @@
 <div class="main-wrapper">
   <div class="wrapper-skinny">
     <div class="back">
-      <%= link_to cocktails_path, class:'btn-back-special' do%>
+      <%= link_to cocktails_path, class:'btn-back-special' do %>
       <i class="fa fa-arrow-circle-o-left"></i>
       Go back to cocktails page
       <% end %>
@@ -19,8 +19,11 @@
     <div class="wrapper-cocktail">
       <h3><%= @cocktail.name %></h3>
       <div class="pic">
-        <%#= cl_image_tag @cocktail.photo.url(:standard) %>
-        <%= image_tag @cocktail.foreign_image %>
+        <% if @cocktail.photo.model[:photo].nil? %>
+          <%= image_tag @cocktail.foreign_image %>
+        <% else %>
+          <%= cl_image_tag @cocktail.photo.url(:standard) %>
+        <% end %>
       </div>
       <div class="photo-update">
         <%= simple_form_for(@cocktail) do |f| %>
