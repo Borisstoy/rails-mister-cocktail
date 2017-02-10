@@ -34,7 +34,7 @@ photos = [
 ]
 
 
-Cocktail.destroy_all
+# Cocktail.destroy_all
 
 recipes_serialized = File.read('db/recipes.json')
 recipes = JSON.parse(recipes_serialized)
