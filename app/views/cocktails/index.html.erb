@@ -15,15 +15,17 @@
     <% @cocktails.each do |cocktail| %>
       <div class="wrapper-list">
         <div class="cock-pic">
+        <%= link_to cocktail_path(cocktail) do %>
           <% if cocktail.photo.model[:photo].nil? %>
             <%= image_tag cocktail.foreign_image %>
           <% else %>
             <%= cl_image_tag cocktail.photo.url(:standard) %>
           <% end %>
-        </div>
-        <div class="cock-name">
-          <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-        </div>
+          </div>
+          <div class="cock-name">
+            <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+          </div>
+        <% end %>
         <div class="cock-action">
           <%= link_to "Delete this cocktail", cocktail_path(cocktail), method: :delete, data: {confirm: 'Are you sure?'}, class: 'button-delete' %>
         </div>
