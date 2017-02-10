@@ -11,7 +11,11 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.create(ingredient_params)
     @ingredient.save
-    redirect_to
+    redirect_to ingredients
+  end
+
+  def show
+    @ingredient = Ingredient.find(params[:id])
   end
 
   private

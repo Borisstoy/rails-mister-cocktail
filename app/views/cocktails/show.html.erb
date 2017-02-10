@@ -7,8 +7,11 @@
 
 <div class="main-wrapper">
   <div class="wrapper-skinny">
-  <%= link_to "Go back to cocktails page", cocktails_path, class:'button-back' %>
+    <div class="back">
+      <%= link_to "Go back to cocktails page", cocktails_path, class:'btn-back-special' %>
+    </div>
     <div class="wrapper-cocktail">
+      <h3><%= @cocktail.name %></h3>
       <p>To make this cocktail, you need:</p>
       <% @cocktail.doses.each do |dose| %>
         Dose: <%= dose.description %> |
@@ -22,7 +25,7 @@
     <hr>
 
     <div class="wrapper-dose">
-      <h3>Add doses to: <%= @cocktail.name %></h3>
+      <h4>Add doses to: <%= @cocktail.name %></h4>
       <%= simple_form_for([@cocktail, @dose]) do |f|%>
         <%= f.input :ingredient_id, collection: Ingredient.all.order(:name)  %>
         <%= f.input :description %>
