@@ -12,7 +12,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% if content_for?(:navbar) %>
+      <%= yield(:navbar) %>
+    <% else %>
+      <%= render 'shared/navbar_default' %>
+    <% end %>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

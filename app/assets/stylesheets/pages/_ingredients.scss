@@ -13,3 +13,18 @@
   }
 }
 
+ul {
+  list-style: none;
+  color: #000;
+}
+
+li {
+  border-bottom: 1px solid #eaeaea;
+}
+
+a {
+  &:hover {
+    color: #e74c3c;
+    text-decoration: none;
+  }
+}
