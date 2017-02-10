@@ -38,6 +38,10 @@ p, a {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eaeaea;
+  .cock-pic {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+  }
   .cock-name {
     flex: 1 0 auto;
     padding: 2em 0;

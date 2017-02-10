@@ -1,3 +1,8 @@
+.list-doses {
+  list-style: none;
+  margin-left: 0;
+}
+
 .banner-cocktails {
   background: #f85032; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #f85032 , #e73827); /* Chrome 10-25, Safari 5.1-6 */
@@ -52,4 +57,12 @@
 
 .icons {
   color: #c0392b;
+}
+
+.pic {
+  margin: 2rem 0;
+}
+
+.doses {
+  margin-top: 3rem;
 }
