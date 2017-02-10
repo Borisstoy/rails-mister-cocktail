@@ -11,7 +11,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="wrapper-list">
         <div class="cock-pic">
-          <%= cl_image_tag cocktail.photo, height: 65, width: 65, crop: :fill %>
+          <%= cl_image_tag cocktail.photo, height: 65, width: 65 %>
         </div>
         <div class="cock-name">
           <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>

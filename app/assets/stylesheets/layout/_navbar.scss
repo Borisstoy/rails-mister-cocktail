@@ -5,6 +5,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1em 1.5em;
+  position: absolute;
   .logo {
     img {
       max-width: 75px;
@@ -12,6 +13,7 @@ body {
     span {
       font-size: 1.1em;
       font-weight: 800;
+      color: #fff;
       font-family: 'Bitter', serif;
     }
   }

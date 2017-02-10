@@ -19,8 +19,16 @@
     <div class="wrapper-cocktail">
       <h3><%= @cocktail.name %></h3>
       <div class="pic">
-        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @cocktail.photo.url(:standard) %>
       </div>
+      <div class="photo-update">
+        <%= simple_form_for(@cocktail) do |f| %>
+          <%= f.input :photo, label: 'Update this picture!' %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "Update picture", class:'button-back' %>
+        <% end %>
+      </div>
+      <hr>
       <div class="doses">
         <% @cocktail.doses.each do |dose| %>
           <ul>
